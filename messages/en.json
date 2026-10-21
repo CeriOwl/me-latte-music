@@ -1,0 +1,79 @@
+{
+  "common": {
+    "brand": "Me latte records",
+    "location": "Col. Americana · GDL",
+    "live": "LIVE",
+    "records": "{count, plural, one {# record} other {# records}}",
+    "fromHouse": "From the house",
+    "language": "Language",
+    "back": "Back",
+    "coverAlt": "Cover of {title} by {artist}"
+  },
+  "nowPlaying": {
+    "title": "Now playing",
+    "communityBadge": "COMMUNITY RECORD",
+    "houseBadge": "HOUSE RECORD",
+    "broughtBy": "Brought by <strong>@{name}</strong>",
+    "side": "Side {side}",
+    "nothingPlaying": "Nothing is playing right now",
+    "nothingPlayingHint": "Be the first one to put a record on.",
+    "upNext": "Up next",
+    "queueMeta": "{count, plural, one {# record} other {# records}} · ~{minutes} min",
+    "emptyQueue": "The queue is empty. Add your record!",
+    "addCta": "Add my record",
+    "marquee": "ONLY MUSIC CAN SAVE US ✦ SPECIALTY COFFEE ✦ BRING YOUR VINYL ✦ THU TO SAT UNTIL 9 PM ✦"
+  },
+  "add": {
+    "title": "Put your record<br/>in the queue",
+    "queueCount": "{count} IN THE QUEUE",
+    "searchLabel": "01 · FIND YOUR RECORD",
+    "searchPlaceholder": "Album or artist",
+    "searching": "Searching…",
+    "noResults": "We couldn't find it. Try the artist's name.",
+    "searchError": "Search is unavailable right now. Try again in a moment.",
+    "nicknameLabel": "02 · WHAT SHOULD WE CALL YOU?",
+    "nicknamePlaceholder": "Your nickname, no account or password",
+    "ctaReady": "Add to the queue",
+    "ctaNotReady": "Pick a record and a nickname",
+    "ctaSending": "Adding…",
+    "rateLimited": "Easy there! You've added a lot of records. Try again in a few minutes.",
+    "genericError": "Something went wrong. Try again.",
+    "doneBadge": "YOU'RE IN!",
+    "donePosition": "You're #{position}<br/>in the queue",
+    "doneRecord": "{title} · brought by <strong>@{name}</strong>",
+    "doneEta": "Plays in ~{minutes} min",
+    "doneNote": "When it plays, your record shows up with your nickname. Take it back at the end, or leave it on loan.",
+    "seeQueue": "See the live queue",
+    "addAnother": "Add another record"
+  },
+  "screen": {
+    "nowPlaying": "NOW PLAYING",
+    "next": "NEXT",
+    "scan": "Scan and add your record",
+    "qrAlt": "QR code to add your record to the queue",
+    "nothingPlaying": "Nothing playing",
+    "nothingPlayingHint": "Scan the code and put the first record on",
+    "marquee": "ONLY MUSIC CAN SAVE US ✦ {played, plural, =0 {NO RECORDS PLAYED YET} one {# RECORD PLAYED TODAY} other {# RECORDS PLAYED TODAY}} ✦ THURSDAY: LISTENING CLUB 7 PM ✦ NEW ON THE BAR: HIBISCUS COLD BREW ✦"
+  },
+  "staff": {
+    "title": "Bar · queue control",
+    "playedToday": "{count, plural, one {# record played today} other {# records played today}}",
+    "nowPlaying": "NOW PLAYING",
+    "next": "Next",
+    "after": "After: <strong>{title}</strong>",
+    "inQueue": "In the queue",
+    "emptyQueue": "The queue is empty. Wait for someone to scan the QR code.",
+    "moveUp": "Move up in the queue",
+    "remove": "Remove",
+    "nothingPlaying": "Nothing playing",
+    "signOut": "Sign out",
+    "login": {
+      "title": "Staff access",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "invalid": "Wrong username or password."
+    }
+  }
+}

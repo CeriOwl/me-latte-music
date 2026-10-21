@@ -1,0 +1,79 @@
+{
+  "common": {
+    "brand": "Me latte records",
+    "location": "Col. Americana · GDL",
+    "live": "EN VIVO",
+    "records": "{count, plural, one {# disco} other {# discos}}",
+    "fromHouse": "De la casa",
+    "language": "Idioma",
+    "back": "Volver",
+    "coverAlt": "Portada de {title} de {artist}"
+  },
+  "nowPlaying": {
+    "title": "Sonando ahora",
+    "communityBadge": "DISCO DE LA COMUNIDAD",
+    "houseBadge": "DISCO DE LA CASA",
+    "broughtBy": "Lo trajo <strong>@{name}</strong>",
+    "side": "Lado {side}",
+    "nothingPlaying": "No hay nada sonando",
+    "nothingPlayingHint": "Sé el primero en poner un disco.",
+    "upNext": "Sigue en la fila",
+    "queueMeta": "{count, plural, one {# disco} other {# discos}} · ~{minutes} min",
+    "emptyQueue": "La fila está vacía. ¡Pon tu disco!",
+    "addCta": "Poner mi disco",
+    "marquee": "ONLY MUSIC CAN SAVE US ✦ CAFÉ DE ESPECIALIDAD ✦ TRAE TU VINIL ✦ JUE A SÁB HASTA LAS 9 PM ✦"
+  },
+  "add": {
+    "title": "Pon tu disco<br/>en la fila",
+    "queueCount": "{count} EN LA FILA",
+    "searchLabel": "01 · BUSCA TU DISCO",
+    "searchPlaceholder": "Álbum o artista",
+    "searching": "Buscando…",
+    "noResults": "No lo encontramos. Prueba con el nombre del artista.",
+    "searchError": "La búsqueda no está disponible ahora. Inténtalo en un momento.",
+    "nicknameLabel": "02 · ¿CÓMO TE DECIMOS?",
+    "nicknamePlaceholder": "Tu apodo, sin cuenta ni contraseña",
+    "ctaReady": "Agregar a la fila",
+    "ctaNotReady": "Elige un disco y tu apodo",
+    "ctaSending": "Agregando…",
+    "rateLimited": "¡Con calma! Has agregado muchos discos. Inténtalo en unos minutos.",
+    "genericError": "Algo salió mal. Inténtalo de nuevo.",
+    "doneBadge": "¡ADENTRO!",
+    "donePosition": "Eres el #{position}<br/>en la fila",
+    "doneRecord": "{title} · lo trae <strong>@{name}</strong>",
+    "doneEta": "Suena en ~{minutes} min",
+    "doneNote": "Cuando suene, tu disco queda en pantalla con tu apodo. Llévatelo de vuelta al final, o déjalo en préstamo.",
+    "seeQueue": "Ver la fila en vivo",
+    "addAnother": "Poner otro disco"
+  },
+  "screen": {
+    "nowPlaying": "SONANDO AHORA",
+    "next": "SIGUE",
+    "scan": "Escanea y pon tu disco",
+    "qrAlt": "Código QR para poner tu disco en la fila",
+    "nothingPlaying": "Nada sonando",
+    "nothingPlayingHint": "Escanea el código y pon el primer disco",
+    "marquee": "ONLY MUSIC CAN SAVE US ✦ {played, plural, =0 {AÚN NO SUENA NINGÚN DISCO} one {HOY SONÓ # DISCO} other {HOY SONARON # DISCOS}} ✦ JUEVES: CLUB DE ESCUCHA 7 PM ✦ NUEVA EN LA BARRA: COLD BREW DE JAMAICA ✦"
+  },
+  "staff": {
+    "title": "Barra · control de la fila",
+    "playedToday": "{count, plural, one {Hoy sonó # disco} other {Hoy sonaron # discos}}",
+    "nowPlaying": "SONANDO AHORA",
+    "next": "Siguiente",
+    "after": "Después: <strong>{title}</strong>",
+    "inQueue": "En la fila",
+    "emptyQueue": "La fila está vacía. Espera a que alguien escanee el QR.",
+    "moveUp": "Subir en la fila",
+    "remove": "Quitar",
+    "nothingPlaying": "Nada sonando",
+    "signOut": "Cerrar sesión",
+    "login": {
+      "title": "Acceso del staff",
+      "username": "Usuario",
+      "password": "Contraseña",
+      "submit": "Entrar",
+      "submitting": "Entrando…",
+      "invalid": "Usuario o contraseña incorrectos."
+    }
+  }
+}
