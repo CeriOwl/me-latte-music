@@ -24,7 +24,7 @@
     "marquee": "ONLY MUSIC CAN SAVE US ✦ SPECIALTY COFFEE ✦ BRING YOUR VINYL ✦ THU TO SAT UNTIL 9 PM ✦"
   },
   "add": {
-    "title": "Put your record<br/>in the queue",
+    "title": "Put your record<br></br>in the queue",
     "queueCount": "{count} IN THE QUEUE",
     "searchLabel": "01 · FIND YOUR RECORD",
     "searchPlaceholder": "Album or artist",
@@ -39,7 +39,7 @@
     "rateLimited": "Easy there! You've added a lot of records. Try again in a few minutes.",
     "genericError": "Something went wrong. Try again.",
     "doneBadge": "YOU'RE IN!",
-    "donePosition": "You're #{position}<br/>in the queue",
+    "donePosition": "You're #{position}<br></br>in the queue",
     "doneRecord": "{title} · brought by <strong>@{name}</strong>",
     "doneEta": "Plays in ~{minutes} min",
     "doneNote": "When it plays, your record shows up with your nickname. Take it back at the end, or leave it on loan.",
@@ -53,7 +53,7 @@
     "qrAlt": "QR code to add your record to the queue",
     "nothingPlaying": "Nothing playing",
     "nothingPlayingHint": "Scan the code and put the first record on",
-    "marquee": "ONLY MUSIC CAN SAVE US ✦ {played, plural, =0 {NO RECORDS PLAYED YET} one {# RECORD PLAYED TODAY} other {# RECORDS PLAYED TODAY}} ✦ THURSDAY: LISTENING CLUB 7 PM ✦ NEW ON THE BAR: HIBISCUS COLD BREW ✦"
+    "marquee": "ONLY MUSIC CAN SAVE US ✦ {played, plural, =0 {NO RECORDS PLAYED YET} one {# RECORD PLAYED TODAY} other {# RECORDS PLAYED TODAY}}  ✦ NEW ON THE BAR: TANGERINE COLD BREW ✦"
   },
   "staff": {
     "title": "Bar · queue control",

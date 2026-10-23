@@ -53,11 +53,11 @@ export async function searchAlbums(query: string): Promise<AlbumInput[]> {
   const headers: Record<string, string> = {
     "User-Agent": "MeLatteRecords/1.0",
   };
-  if (process.env.DISCOGS_TOKEN) {
-    headers.Authorization = `Discogs token=${process.env.DISCOGS_TOKEN}`;
+  if (process.env.DISCOGS_TOKEN && process.env.DISCOGS_TOKEN_SECRET) {
+    headers.Authorization = `Discogs key=${process.env.DISCOGS_TOKEN}, secret=${process.env.DISCOGS_TOKEN_SECRET}`;
   }
 
-  const res = await fetch(url, { headers, cache: "no-store" });
+  const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`Discogs responded ${res.status}`);
   const data = (await res.json()) as { results: DiscogsResult[] };
 

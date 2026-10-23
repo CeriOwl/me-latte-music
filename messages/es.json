@@ -24,7 +24,7 @@
     "marquee": "ONLY MUSIC CAN SAVE US ✦ CAFÉ DE ESPECIALIDAD ✦ TRAE TU VINIL ✦ JUE A SÁB HASTA LAS 9 PM ✦"
   },
   "add": {
-    "title": "Pon tu disco<br/>en la fila",
+    "title": "Pon tu disco<br></br>en la fila",
     "queueCount": "{count} EN LA FILA",
     "searchLabel": "01 · BUSCA TU DISCO",
     "searchPlaceholder": "Álbum o artista",
@@ -39,7 +39,7 @@
     "rateLimited": "¡Con calma! Has agregado muchos discos. Inténtalo en unos minutos.",
     "genericError": "Algo salió mal. Inténtalo de nuevo.",
     "doneBadge": "¡ADENTRO!",
-    "donePosition": "Eres el #{position}<br/>en la fila",
+    "donePosition": "Eres el #{position}<br></br>en la fila",
     "doneRecord": "{title} · lo trae <strong>@{name}</strong>",
     "doneEta": "Suena en ~{minutes} min",
     "doneNote": "Cuando suene, tu disco queda en pantalla con tu apodo. Llévatelo de vuelta al final, o déjalo en préstamo.",
@@ -53,7 +53,7 @@
     "qrAlt": "Código QR para poner tu disco en la fila",
     "nothingPlaying": "Nada sonando",
     "nothingPlayingHint": "Escanea el código y pon el primer disco",
-    "marquee": "ONLY MUSIC CAN SAVE US ✦ {played, plural, =0 {AÚN NO SUENA NINGÚN DISCO} one {HOY SONÓ # DISCO} other {HOY SONARON # DISCOS}} ✦ JUEVES: CLUB DE ESCUCHA 7 PM ✦ NUEVA EN LA BARRA: COLD BREW DE JAMAICA ✦"
+    "marquee": "ONLY MUSIC CAN SAVE US ✦ {played, plural, =0 {AÚN NO SUENA NINGÚN DISCO} one {HOY SONÓ # DISCO} other {HOY SONARON # DISCOS}} ✦ NUEVA EN LA BARRA: COLD BREW DE MANDARINA ✦"
   },
   "staff": {
     "title": "Barra · control de la fila",

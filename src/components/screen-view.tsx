@@ -22,15 +22,15 @@ export function ScreenView({ initial, qrSvg }: { initial: QueueSnapshot; qrSvg: 
       <LocaleSwitcher className="absolute right-4 top-4 z-20 opacity-60 hover:opacity-100" />
 
       <div className="grid min-h-0 flex-1 grid-cols-1 items-center gap-[3vw] p-[clamp(1rem,4vw,4rem)] lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]">
-        <div className="relative mx-auto aspect-[5/4] w-full max-w-[min(40vw,60vh)] min-w-48">
+        <div className="relative mx-auto aspect-5/4 w-full max-w-[min(40vw,60vh)] min-w-48">
           {now ? (
             <>
-              <Vinyl className="absolute left-[38%] top-[8%] size-[76%] animate-peek" />
+              <Vinyl className="absolute left-[50%] top-[10%] w-[55%] h-auto animate-peek" />
               <Cover
                 src={now.album.coverUrl}
                 alt={c("coverAlt", { title: now.album.title, artist: now.album.artist })}
                 seed={now.album.id}
-                className="absolute left-0 top-0 size-4/5 rounded-[6%] shadow-[0_24px_50px_rgba(30,5,9,0.45)]"
+                className="absolute left-0 top-0 w-[70%] rounded-[6%] shadow-[0_24px_50px_rgba(30,5,9,0.45)]"
               />
               <Badge className="absolute -left-2 bottom-0 animate-bob border-2 border-wine-deep font-mono text-[clamp(0.6rem,1.2vw,0.95rem)] tracking-wide">
                 {now.isHouse ? n("houseBadge") : n("communityBadge")}
