@@ -1,0 +1,10 @@
+name: deploy on homelab
+
+on:
+  push:
+    branches: [dev]
+jobs:
+  hello-word:
+    runs-on: ubuntu-latest
+    steps:
+      - run: | echo "Hello World"
