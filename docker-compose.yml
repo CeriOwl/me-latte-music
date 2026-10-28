@@ -1,5 +1,44 @@
 
 services:
+  app:
+    build: .
+    container_name: melatte-app
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/melatte
+      REDIS_URL: redis://redis:6379
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET}
+      BETTER_AUTH_URL: ${BETTER_AUTH_URL:-http://localhost:3000}
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-http://localhost:3000}
+      DISCOGS_TOKEN: ${DISCOGS_TOKEN:-}
+      DISCOGS_TOKEN_SECRET: ${DISCOGS_TOKEN_SECRET:-}
+      TZ: America/Mexico_City
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - backend
+
+  # One-off: `docker compose run --rm migrate` (or `... migrate pnpm db:seed`)
+  migrate:
+    build:
+      context: .
+      target: tools
+    profiles: ["tools"]
+    environment:
+      DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/melatte
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - backend
+
   postgres:
     image: postgres:17
     container_name: melatte-postgres
@@ -12,6 +51,11 @@ services:
       TZ: America/Mexico_City
     volumes:
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d melatte"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
     restart: unless-stopped
     networks:
       - backend
@@ -35,6 +79,8 @@ services:
     command: tunnel run
     environment:
       - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    networks:
+      - backend
 
 networks:
   backend:

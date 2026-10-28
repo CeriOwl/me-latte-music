@@ -3,8 +3,57 @@ name: deploy on homelab
 on:
   push:
     branches: [dev]
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Action to run on the homelab
+        type: choice
+        default: deploy
+        options:
+          - deploy
+          - start
+          - stop
+
+# One run at a time so a stop can't race a deploy
+concurrency:
+  group: homelab
+  cancel-in-progress: false
+
 jobs:
-  hello-word:
-    runs-on: ubuntu-latest
+  run:
+    # Needs a self-hosted runner on the homelab host (Docker + Compose installed)
+    runs-on: self-hosted
+    env:
+      COMPOSE_PROJECT_NAME: me-latte-music
+      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+      TUNNEL_TOKEN: ${{ secrets.TUNNEL_TOKEN }}
+      BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
+      BETTER_AUTH_URL: ${{ vars.BETTER_AUTH_URL }}
+      PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
+      DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+      DISCOGS_TOKEN_SECRET: ${{ secrets.DISCOGS_TOKEN_SECRET }}
     steps:
-      - run: | echo "Hello World"
+      # A push to dev has no inputs, so it deploys
+      - name: Resolve action
+        run: echo "ACTION=${{ inputs.action || 'deploy' }}" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+        if: env.ACTION == 'deploy'
+
+      - name: Deploy (build, migrate, restart)
+        if: env.ACTION == 'deploy'
+        run: |
+          docker compose up -d --wait postgres redis
+          docker compose build app
+          docker compose run --rm migrate
+          docker compose up -d --remove-orphans app me-latte-music-tunnel
+          docker image prune -f
+
+      # Stop/start only touch existing containers; data volumes are kept
+      - name: Turn off
+        if: env.ACTION == 'stop'
+        run: docker compose -p "$COMPOSE_PROJECT_NAME" stop
+
+      - name: Turn on
+        if: env.ACTION == 'start'
+        run: docker compose -p "$COMPOSE_PROJECT_NAME" start
